@@ -1,0 +1,2 @@
+# MenorSubSeq
+lista 4
