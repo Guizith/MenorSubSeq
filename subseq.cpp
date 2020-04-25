@@ -10,30 +10,20 @@ void subseq(int vet[], int n){
 	
 	for(int i=0;i<n;i++){
 		int sub = 0;
-	//	printf("\n--------------- roda i -----------------\n");
 		int ultimo=0;
 		int idcpst = 0;
-		for(int j=(i+1);j<n;j++){
-			
-		//	printf("\n comprando %d com %d", vet[j],vet[j-1]);
-			//printf("\n valor de j %d valor de n %d", j,n);
-			
+		for(int j=(i+1);j<n;j++){	
 			if(vet[j]> vet[j-1] && vet[j-1]>ultimo){
-			//	printf("   --- >entrou %d , valor do ultuimo %d", vet[j-1],ultimo);
 				sub++;
 				seqsnum[i][idcpst] = vet[j-1];
 				idcpst++;
-				//printf("\n -----------------------------------valor gravado em seqsnum na pos [%d][%d] = %d", i,idcpst,vet[j-1]);
 				ultimo = vet[j-1];
 			}
 			if(j+1 == n){
 				if(vet[j] > ultimo){
-					//printf("\n validei ultimo caso");
-					//printf("   --- >entrou last case %d , valor do ultuimo %d, valor de vetj %d", vet[j-1],ultimo,vet[j]);
 					sub++;
 					seqsnum[i][idcpst] = vet[j];
 					idcpst++;
-				//	printf("\n -----------------------------------valor gravado em seqsnum na pos [%d][%d] = %d", i,idcpst,vet[j]);
 					ultimo = vet[j];
 				}
 			}
