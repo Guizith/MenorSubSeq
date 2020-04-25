@@ -68,9 +68,21 @@ void subseq(int vet[], int n){
 
 int main(){
 	
-	int vet[9] = {1,4,3,6,9,5,2,7,8};
-	subseq(vet,9);
+	//int vet[9] = {1,4,3,6,9,5,2,7,8};
+	//subseq(vet,9);
+	int n = 0, i = 0;
+	printf("Quantos elementos tem a sequencia?");
+	scanf("%d",&n);
+	int vet[n];
+	while(i<n){
+		printf("Digite o elemento %d: ",i);
+		scanf("%d",&vet[i]);
+		i++;
+	}
+	
+	subseq(vet,n);
 	
 	
 	system("pause");
+	return 0;
 }
