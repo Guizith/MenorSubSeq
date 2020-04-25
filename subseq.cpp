@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* 	Algoritmo de maior subsequencia em um vetor de n dimensao
 
+	Feito por: Guilherme Henrique Moreira   RA: 22117039-2
+	Professor: Guilherme Waches   Analise e Complexidade de Algoritmos
+	(FEI)
+*/
 
 void subseq(int vet[], int n){
 	//Vetores auxiliares
@@ -37,9 +42,10 @@ void subseq(int vet[], int n){
 	}
 	
 	
-	
+	//Variaveis auxiliares
 	int aux = seqs[0];	//Variavel auxiliar para achar a maior subsequencia do vetor de tamanho das subsequencias;
 	int idc = 0;		//Variavel para armazenar o indice da maior subsequencia (para conseguir ser encontrado no vetor dos elementos);
+	
 	for(int i=0;i<n;i++){
 		//If de comparacao
 		if(seqs[i]>aux){
@@ -47,6 +53,7 @@ void subseq(int vet[], int n){
 			idc = i;
 		}	
 	}
+	
 	
 	//print do vetor de maior subsequencia (apatir do indice e do tamanho retirado no laço anterior);
 	printf("\n Vetor de maior subsequencias:{ ",idc);
@@ -63,5 +70,7 @@ int main(){
 	
 	int vet[9] = {1,4,3,6,9,5,2,7,8};
 	subseq(vet,9);
-  system("pause");
+	
+	
+	system("pause");
 }
